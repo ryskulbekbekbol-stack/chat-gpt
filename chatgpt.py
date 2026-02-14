@@ -2,9 +2,10 @@ import telebot, json, time, random, os
 from telebot.types import ReplyKeyboardMarkup
 from openai import OpenAI
 from gtts import gTTS
+import os
 
-BOT_TOKEN="ТВОЙ_ТОКЕН"
-API_KEY="ТВОЙ_API_КЛЮЧ"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_KEY = os.getenv("API_KEY")
 ADMINS={123456789}
 
 bot=telebot.TeleBot(BOT_TOKEN)
